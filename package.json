@@ -1,0 +1,29 @@
+{
+  "name": "first-look-dash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "createWallet": "node --env-file=.env --no-warnings scripts/createWallet",
+    "createIdentity": "node --env-file=.env --no-warnings scripts/createIdentity",
+    "retrieveIdentities": "node --env-file=.env --no-warnings scripts/retrieveIdentities",
+    "topUpIdentities": "node --env-file=.env --no-warnings scripts/topUpIdentities",
+    "registerName": "node --env-file=.env --no-warnings scripts/registerName",
+    "retrieveName": "node --env-file=.env --no-warnings scripts/retrieveName",
+    "registerContract": "node --env-file=.env --no-warnings scripts/registerContract",
+    "retrieveContract": "node --env-file=.env --no-warnings scripts/retrieveContract",
+    "updateContract": "node --env-file=.env --no-warnings scripts/updateContract",
+    "submitNoteDocument": "node --env-file=.env --no-warnings scripts/submitNoteDocument",
+    "getDocuments": "node --env-file=.env --no-warnings scripts/getDocuments",
+    "updateNoteDocument": "node --env-file=.env --no-warnings scripts/updateNoteDocument",
+    "deleteNoteDocument": "node --env-file=.env --no-warnings scripts/deleteNoteDocument",
+    "express": "node --env-file=.env --no-warnings --watch api/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "dash": "^4.0.0-rc.2"
+  }
+}
