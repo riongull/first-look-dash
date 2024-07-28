@@ -135,3 +135,24 @@ All of the following are just ideas.  I'm not even sure I want them all.  I also
     [... lines matching original stack trace ...]
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 ```
+12. Update client in "Register and Retrieve Identity" step (and subsequent steps so the copy/paste doesn't overwrite it) to this instead:
+```js
+    import Dash from "dash"
+
+    const {NETWORK,MNEMONIC} = process.env
+
+    export const client = new Dash.Client({
+    network: NETWORK,
+    // picking a known good ip address can sometimes help reliablility
+    dapiAddresses: ["44.227.137.77:1443"],
+    wallet: {
+        mnemonic: MNEMONIC,
+        unsafeOptions: {
+        skipSynchronizationBeforeHeight: 990000,
+        },
+    },
+    })
+```
+(doing this and uncommenting the `dapiClient` line fixed the issue from item 11 above)
+13. Move the `CONTRACT_ID="HPwufg..."` output line down a step so that it doesn't give a false success signal in the output, and having it lower makes it more obvious that we need to paste that in the `.env` file after we get it.
+14. 
