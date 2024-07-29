@@ -23,7 +23,9 @@ to
 
 6. Update this 
 > console.log(`  - Balance: ${identity.balance}`)
+
 to 
+
 > console.log(`  - Balance: ${identity.balance}` credits)
 
 7. Note: Even after refreshing https://platform-explorer.com/identity/7JhZcKKwEpydRBFm1HJHspANvrpqazKzMoS298xPqKUT it shows "Balance	1000000000 Credits", which doesn't match the output from the terminal:
