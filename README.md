@@ -5,27 +5,27 @@ All of the following are just ideas.  I'm not even sure I want them all.  I also
 1. Add a line for `echo "### Feedback about Dash and this tutorial "> README.md
 2. Add something about uploading feedback to GitHub?
 3. Update from `npm i dash@4.0.0-dev.16` to `npm i dash@4.0.0-rc.2` or higher
-4. Update to
+4. Update this tutorial to use:
   ```sh
     npm pkg set \ 
     'scripts.createWallet=node --no-warnings createWallet.js' \
     ...
   ```
-  like the "Dashmate First Look" tutorial does, but it's okay either way.
+like the "Dashmate First Look" tutorial does, but it's okay either way.
 5. Change 
 > "using Dash’s testnet faucet" 
-    to 
+to 
 > "using a Dash testnet faucet, such as [Dash Core Group's](http://faucet.testnet.networks.dash.org) (sometimes buggy) or [CrowdNode's](http://faucet.test.dash.crowdnode.io/)"
 6. Update this 
 > console.log(`  - Balance: ${identity.balance}`)
-    to 
+to 
 > console.log(`  - Balance: ${identity.balance}` credits)
 7. Note: Even after refreshing https://platform-explorer.com/identity/7JhZcKKwEpydRBFm1HJHspANvrpqazKzMoS298xPqKUT it shows "Balance	1000000000 Credits", which doesn't match the output from the terminal:
   ```sh
   Identity ID: 7JhZcKKwEpydRBFm1HJHspANvrpqazKzMoS298xPqKUT
   - Balance: 883461360
   ```
-  I think PE might just be a bit slower than expected to update, because it later caught up.
+I think PE might just be a bit slower than expected to update, because it later caught up.
 8. `TopUpIdentities` didn't appear to do anything at first, because the balance didn't update:
   ```
   rionpublic@Rachaels-iMac first-look-dash % npm run retrieveIdentities
@@ -154,13 +154,16 @@ All of the following are just ideas.  I'm not even sure I want them all.  I also
     })
 ```
 (doing this and uncommenting the `dapiClient` line fixed the issue from item 11 above)
+
 13. Move the `CONTRACT_ID="HPwufg..."` output line down after the contract json output so that it doesn't give a false success signal in the output.  Having it lower makes it more obvious that we need to paste that in the `.env` file after we get it.
+
 14. Move the `DOCUMENT_ID="421B5E..."` output line down after the document json output (similar to above), and make it clear to paste it into the `.env` file.
+
 15. Might make more sense to number the script files so they are ordered in the editor/IDE sequentially (since this is a tutorial) instead of alphabetically.
+
 16. Replace "YOUR-NAME-HERE" with "LABEL" or "Your-LABEL-here" in the following:
 > Open localhost:3001/name/YOUR-NAME-HERE or send a GET request with curl.
 > 
 > Terminal window
 > `curl "http://localhost:3001/name/YOUR-NAME-HERE" -s | json_pp`
 17. Remove/change `dashUniqueIdentityId` as shown in my updated `registerName.js` file (for `dash` v1.0.0-rc.2 and up).
-18. 
