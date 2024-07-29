@@ -3,8 +3,11 @@
 All of the following are just ideas.  I'm not even sure I want them all.  I also know the blog post isn't meant to be a living document, but they may improve it for your readers / our testers.
 
 1. Add a line for `echo "### Feedback about Dash and this tutorial "> README.md
+
 2. Add something about uploading feedback to GitHub?
+
 3. Update from `npm i dash@4.0.0-dev.16` to `npm i dash@4.0.0-rc.2` or higher
+
 4. Update this tutorial to use:
   ```sh
     npm pkg set \ 
@@ -12,20 +15,24 @@ All of the following are just ideas.  I'm not even sure I want them all.  I also
     ...
   ```
 like the "Dashmate First Look" tutorial does, but it's okay either way.
+
 5. Change 
 > "using Dash’s testnet faucet" 
 to 
 > "using a Dash testnet faucet, such as [Dash Core Group's](http://faucet.testnet.networks.dash.org) (sometimes buggy) or [CrowdNode's](http://faucet.test.dash.crowdnode.io/)"
+
 6. Update this 
 > console.log(`  - Balance: ${identity.balance}`)
 to 
 > console.log(`  - Balance: ${identity.balance}` credits)
+
 7. Note: Even after refreshing https://platform-explorer.com/identity/7JhZcKKwEpydRBFm1HJHspANvrpqazKzMoS298xPqKUT it shows "Balance	1000000000 Credits", which doesn't match the output from the terminal:
   ```sh
   Identity ID: 7JhZcKKwEpydRBFm1HJHspANvrpqazKzMoS298xPqKUT
   - Balance: 883461360
   ```
 I think PE might just be a bit slower than expected to update, because it later caught up.
+
 8. `TopUpIdentities` didn't appear to do anything at first, because the balance didn't update:
   ```
   rionpublic@Rachaels-iMac first-look-dash % npm run retrieveIdentities
@@ -62,6 +69,7 @@ I think PE might just be a bit slower than expected to update, because it later 
   warn: Running on a NodeJS env without any specified adapter. Data will not persist.
   IDENTITY_CREDIT_BALANCE for ID 7JhZcKKwEpydRBFm1HJHspANvrpqazKzMoS298xPqKUT: 300860960220
   ```
+
 9. Had trouble registering a name:
 ```
   rionpublic@Rachaels-iMac first-look-dash % npm run registerName
@@ -102,7 +110,9 @@ I think PE might just be a bit slower than expected to update, because it later 
   cause: JsonSchemaError { __wbg_ptr: 6444672 }
   }
 ```
+
 10. I'm guessing the above is related to this: https://discord.com/channels/670271785974890526/670599939528851476/1265748386435567626 and this: https://github.com/dashpay/platform/issues/1999
+
 11. Issue running `registerContract`:
 ```
   rionpublic@Rachaels-iMac first-look-dash % npm run registerContract
@@ -135,6 +145,7 @@ I think PE might just be a bit slower than expected to update, because it later 
     [... lines matching original stack trace ...]
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 ```
+
 12. Update client in "Register and Retrieve Identity" step (and subsequent steps so the copy/paste doesn't overwrite it) to this instead:
 ```js
     import Dash from "dash"
@@ -163,7 +174,6 @@ I think PE might just be a bit slower than expected to update, because it later 
 
 16. Replace "YOUR-NAME-HERE" with "LABEL" or "Your-LABEL-here" in the following:
 > Open localhost:3001/name/YOUR-NAME-HERE or send a GET request with curl.
-> 
 > Terminal window
 > `curl "http://localhost:3001/name/YOUR-NAME-HERE" -s | json_pp`
 17. Remove/change `dashUniqueIdentityId` as shown in my updated `registerName.js` file (for `dash` v1.0.0-rc.2 and up).
