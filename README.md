@@ -18,10 +18,12 @@ like the "Dashmate First Look" tutorial does, but it's okay either way.
 
 5. Change 
 > "using Dash’s testnet faucet" 
+
 to 
+
 > "using a Dash testnet faucet, such as [Dash Core Group's](http://faucet.testnet.networks.dash.org) (sometimes buggy) or [CrowdNode's](http://faucet.test.dash.crowdnode.io/)"
 
-6. Update this 
+6. Update
 > console.log(`  - Balance: ${identity.balance}`)
 
 to 
