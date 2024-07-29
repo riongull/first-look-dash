@@ -154,5 +154,13 @@ All of the following are just ideas.  I'm not even sure I want them all.  I also
     })
 ```
 (doing this and uncommenting the `dapiClient` line fixed the issue from item 11 above)
-13. Move the `CONTRACT_ID="HPwufg..."` output line down a step so that it doesn't give a false success signal in the output, and having it lower makes it more obvious that we need to paste that in the `.env` file after we get it.
-14. 
+13. Move the `CONTRACT_ID="HPwufg..."` output line down after the contract json output so that it doesn't give a false success signal in the output.  Having it lower makes it more obvious that we need to paste that in the `.env` file after we get it.
+14. Move the `DOCUMENT_ID="421B5E..."` output line down after the document json output (similar to above), and make it clear to paste it into the `.env` file.
+15. Might make more sense to number the script files so they are ordered in the editor/IDE sequentially (since this is a tutorial) instead of alphabetically.
+16. Replace "YOUR-NAME-HERE" with "LABEL" or "Your-LABEL-here" in the following:
+> Open localhost:3001/name/YOUR-NAME-HERE or send a GET request with curl.
+> 
+> Terminal window
+> `curl "http://localhost:3001/name/YOUR-NAME-HERE" -s | json_pp`
+17. Remove/change `dashUniqueIdentityId` as shown in my updated `registerName.js` file (for `dash` v1.0.0-rc.2 and up).
+18. 

@@ -24,6 +24,8 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "dash": "^4.0.0-rc.2"
+    "cors": "^2.8.5",
+    "dash": "^4.0.0-rc.2",
+    "express": "^4.19.2"
   }
 }
